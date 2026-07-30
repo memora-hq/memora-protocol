@@ -1,0 +1,72 @@
+{
+  "vector_id": "agent-tee-v1",
+  "domain": "memora:agent:tee:v1\\n",
+  "generated_by": "packages/protocol/src/envelope.ts — computeAgentTeeSigningDigest / signAgentTeeEvent; quote from packages/protocol/src/tee.ts buildMockTeeQuote",
+  "key_note": "Well-known Hardhat dev accounts #0 and #1. Public, test-only keys used throughout this repo's tests — never used for production value.",
+  "agent_private_key": "0x59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d",
+  "agent_address": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+  "tee_quote": {
+    "builder": "buildMockTeeQuote(payload)",
+    "payload": "memora-conformance-vector-v1",
+    "raw_utf8": "MOCK_TEE:memora-conformance-vector-v1",
+    "raw_base64": "TU9DS19URUU6bWVtb3JhLWNvbmZvcm1hbmNlLXZlY3Rvci12MQ==",
+    "quote_hash": "a39966ba342a68dfa1ab575f510357c3809f0b56fabf3d340fbd1685933066a7",
+    "quote_hash_note": "sha256(raw quote bytes), 64-char lowercase hex, no 0x — same derivation the indexer's teeVerifier uses."
+  },
+  "cases": [
+    {
+      "name": "agent-tee-no-parents",
+      "note": "Baseline TEE-domain agent signature. Distinct domain from memora:agent:v1 — not interchangeable.",
+      "fields_input": {
+        "agent_id": "conformance-agent",
+        "agent_signer": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "parent_event_ids": [],
+        "payload_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "task_id": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "tee_quote_hash": "a39966ba342a68dfa1ab575f510357c3809f0b56fabf3d340fbd1685933066a7"
+      },
+      "fields_sorted": {
+        "agent_id": "conformance-agent",
+        "agent_signer": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "parent_event_ids": [],
+        "payload_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "task_id": "0x0000000000000000000000000000000000000000000000000000000000000000",
+        "tee_quote_hash": "a39966ba342a68dfa1ab575f510357c3809f0b56fabf3d340fbd1685933066a7"
+      },
+      "digest_hex": "974a1fa75a4f8b599e651b91adfc30e1081a726c60e34d360612d8662595e3f8",
+      "signature": "0x91742dddfe58c30fbb7574ad243dc84d57d85f45357d86f489cae45241fce2f4100952d948089eacdb33e406eee9d79ed169ad97a94e87a6b0dd2cf749ce2a3b1b",
+      "recovered_signer": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8"
+    },
+    {
+      "name": "agent-tee-unsorted-parents",
+      "note": "fields_input.parent_event_ids is deliberately unsorted; computeAgentTeeSigningDigest sorts internally.",
+      "fields_input": {
+        "agent_id": "conformance-agent",
+        "agent_signer": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "parent_event_ids": [
+          "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+          "3333333333333333333333333333333333333333333333333333333333333333",
+          "8888888888888888888888888888888888888888888888888888888888888888"
+        ],
+        "payload_hash": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+        "task_id": "task-conformance-001",
+        "tee_quote_hash": "a39966ba342a68dfa1ab575f510357c3809f0b56fabf3d340fbd1685933066a7"
+      },
+      "fields_sorted": {
+        "agent_id": "conformance-agent",
+        "agent_signer": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "parent_event_ids": [
+          "3333333333333333333333333333333333333333333333333333333333333333",
+          "8888888888888888888888888888888888888888888888888888888888888888",
+          "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+        ],
+        "payload_hash": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+        "task_id": "task-conformance-001",
+        "tee_quote_hash": "a39966ba342a68dfa1ab575f510357c3809f0b56fabf3d340fbd1685933066a7"
+      },
+      "digest_hex": "ff4d8cd33e7a25d3400552a3fe2713e7d34ac38dd6e34d67493fa6c46e3e8b8b",
+      "signature": "0xfae5e0c32f083ab375c81ed19c526457b65c11402f0a1716aa9a83e223e8920b4d98fd51232908e730bd7bc674bfcfebe1fb6309b512df0355bbf1945f7a99741b",
+      "recovered_signer": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8"
+    }
+  ]
+}

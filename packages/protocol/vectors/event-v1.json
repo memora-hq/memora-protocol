@@ -1,0 +1,80 @@
+{
+  "vector_id": "event-v1",
+  "domain": "memora:event:v1\\n",
+  "generated_by": "packages/protocol/src/envelope.ts — computeSigningDigest / signEventEnvelope",
+  "key_note": "Well-known Hardhat dev accounts #0 and #1. Public, test-only keys used throughout this repo's tests — never used for production value.",
+  "operator_private_key": "0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80",
+  "operator_address": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+  "cases": [
+    {
+      "name": "operator-no-parents",
+      "note": "Baseline Phase 2 operator envelope: no parents, no agent countersignature.",
+      "commit": {
+        "memory_id": "mem_0000000000000000000000000000000a",
+        "agent_id": "conformance-agent",
+        "cid_ciphertext": "QmConformanceVectorCidOne",
+        "payload_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "schema_version": 1,
+        "event_id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "signer": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+        "signature": null,
+        "task_id": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      "parent_event_ids_input": [],
+      "parent_event_ids_sorted": [],
+      "signing_fields": {
+        "agent_id": "conformance-agent",
+        "cid_ciphertext": "QmConformanceVectorCidOne",
+        "event_id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "parent_event_ids": [],
+        "payload_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "task_id": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      "digest_hex": "aea407fbca0918fe4510d4ae122b08940b02899ab5e164dae2665c520f0adfd5",
+      "signature": "0x0555430557389df6a0b74a9f9fa2106761fd7ab46be3a0b77f559c9378f1e3b40644364f941766963643bbab2e56b94d0f61a9f80c47496e8a5c5d94039586ac1c",
+      "recovered_signer": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
+    },
+    {
+      "name": "operator-unsorted-parents-with-agent-signer",
+      "note": "parent_event_ids_input is deliberately unsorted. The frozen digest is the SORTED-parent digest — signing/verifying with the unsorted input must produce exactly this digest (see AGENTS.md gotcha #5).",
+      "commit": {
+        "memory_id": "mem_0000000000000000000000000000000b",
+        "agent_id": "conformance-agent",
+        "cid_ciphertext": "QmConformanceVectorCidTwo",
+        "payload_hash": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+        "schema_version": 1,
+        "event_id": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+        "signer": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+        "agent_signer": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "signature": null,
+        "task_id": "task-conformance-001"
+      },
+      "parent_event_ids_input": [
+        "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+        "1111111111111111111111111111111111111111111111111111111111111111",
+        "9999999999999999999999999999999999999999999999999999999999999999"
+      ],
+      "parent_event_ids_sorted": [
+        "1111111111111111111111111111111111111111111111111111111111111111",
+        "9999999999999999999999999999999999999999999999999999999999999999",
+        "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+      ],
+      "signing_fields": {
+        "agent_id": "conformance-agent",
+        "cid_ciphertext": "QmConformanceVectorCidTwo",
+        "event_id": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+        "parent_event_ids": [
+          "1111111111111111111111111111111111111111111111111111111111111111",
+          "9999999999999999999999999999999999999999999999999999999999999999",
+          "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+        ],
+        "payload_hash": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+        "task_id": "task-conformance-001",
+        "agent_signer": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8"
+      },
+      "digest_hex": "ca85ebf21d37692bff30ee3c11874ea4f7630de3db97ce22c8d965bad663356d",
+      "signature": "0x7b3ce7b5b67832922e5cbbfe24ed97edf136db04f2aca81d9a43af8d23ddede765730ae8f2467b639cb5ba09dfdd0d6d825cf503c90c6ae44b28bdb35a5f89d51b",
+      "recovered_signer": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
+    }
+  ]
+}

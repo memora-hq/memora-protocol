@@ -1,0 +1,111 @@
+{
+  "vector_id": "merkle-v2-edge-cases",
+  "domain": "memora:leaf:v1\\n",
+  "generated_by": "packages/protocol/src/merkle.ts — verifyMerkleProof (edge cases: stale proof.root metadata, 0x-prefixed inputs)",
+  "key_note": "Well-known Hardhat dev accounts #0 and #1. Public, test-only keys used throughout this repo's tests — never used for production value.",
+  "tree": {
+    "leaf_inputs": [
+      {
+        "event_id": "0000000000000000000000000000000000000000000000000000000000000001",
+        "payload_hash": "1111111111111111111111111111111111111111111111111111111111111111",
+        "agent_id": "conformance-agent",
+        "agent_signer": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "operator_signer": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+        "parent_event_ids": [],
+        "event_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "agent_commit_digest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      {
+        "event_id": "0000000000000000000000000000000000000000000000000000000000000002",
+        "payload_hash": "2222222222222222222222222222222222222222222222222222222222222222",
+        "agent_id": "conformance-agent",
+        "agent_signer": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "operator_signer": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+        "parent_event_ids": [
+          "000000000000000000000000000000000000000000000000000000000000000f",
+          "0000000000000000000000000000000000000000000000000000000000000001"
+        ],
+        "event_digest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+        "agent_commit_digest": null
+      },
+      {
+        "event_id": "0000000000000000000000000000000000000000000000000000000000000003",
+        "payload_hash": "0x3333333333333333333333333333333333333333333333333333333333333333",
+        "agent_id": "conformance-agent",
+        "agent_signer": null,
+        "operator_signer": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+        "parent_event_ids": [
+          "0000000000000000000000000000000000000000000000000000000000000002"
+        ],
+        "event_digest": null,
+        "agent_commit_digest": null
+      }
+    ],
+    "leaves": [
+      "ce2626fa067a2d80be4ee4fc1a4697cf995214b1c2750bde3a2ddc2bc2f27e35",
+      "da9bc5c1c0c4a640a1d76e2cc4102509325318c5815e3e0006e71278ca46bf06",
+      "fc43ba84c828cf23786f957b73b17069058462a348168bd9f1558fcd526162ca"
+    ],
+    "levels": [
+      [
+        "ce2626fa067a2d80be4ee4fc1a4697cf995214b1c2750bde3a2ddc2bc2f27e35",
+        "da9bc5c1c0c4a640a1d76e2cc4102509325318c5815e3e0006e71278ca46bf06",
+        "fc43ba84c828cf23786f957b73b17069058462a348168bd9f1558fcd526162ca"
+      ],
+      [
+        "e2588b7dda532b8db5e973b5ac6eea4e7737ec3ad6b12341327514e463547343",
+        "da02194f7704eb2f661e5b27014b1150bdcd9137ff9cc060467d73c23306d7c7"
+      ],
+      [
+        "b4de27c0c80fc58d21dc3f0ebe8d2fb2d6998b5559a04d2ac8924947f2fbaf70"
+      ]
+    ],
+    "root": "b4de27c0c80fc58d21dc3f0ebe8d2fb2d6998b5559a04d2ac8924947f2fbaf70"
+  },
+  "cases": [
+    {
+      "name": "stale-proof-root-metadata",
+      "note": "proof.root is deliberately wrong (simulates a stale/re-anchored batch's proof metadata). leaf + proof steps still reconstruct to the real, separately-supplied root. A conforming verifier must return true — proof.root is descriptive metadata, not part of the check.",
+      "leaf": "da9bc5c1c0c4a640a1d76e2cc4102509325318c5815e3e0006e71278ca46bf06",
+      "proof": {
+        "index": 1,
+        "leaf": "da9bc5c1c0c4a640a1d76e2cc4102509325318c5815e3e0006e71278ca46bf06",
+        "proof": [
+          {
+            "hash": "ce2626fa067a2d80be4ee4fc1a4697cf995214b1c2750bde3a2ddc2bc2f27e35",
+            "side": "left"
+          },
+          {
+            "hash": "da02194f7704eb2f661e5b27014b1150bdcd9137ff9cc060467d73c23306d7c7",
+            "side": "right"
+          }
+        ],
+        "root": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+      },
+      "root": "b4de27c0c80fc58d21dc3f0ebe8d2fb2d6998b5559a04d2ac8924947f2fbaf70",
+      "expected": true
+    },
+    {
+      "name": "0x-prefixed-inputs",
+      "note": "leaf, proof.leaf, every proof step's hash, and root are all 0x-prefixed. A conforming verifier must normalize the prefix the same as unprefixed hex and still return true.",
+      "leaf": "0xda9bc5c1c0c4a640a1d76e2cc4102509325318c5815e3e0006e71278ca46bf06",
+      "proof": {
+        "index": 1,
+        "leaf": "0xda9bc5c1c0c4a640a1d76e2cc4102509325318c5815e3e0006e71278ca46bf06",
+        "proof": [
+          {
+            "hash": "0xce2626fa067a2d80be4ee4fc1a4697cf995214b1c2750bde3a2ddc2bc2f27e35",
+            "side": "left"
+          },
+          {
+            "hash": "0xda02194f7704eb2f661e5b27014b1150bdcd9137ff9cc060467d73c23306d7c7",
+            "side": "right"
+          }
+        ],
+        "root": "0xb4de27c0c80fc58d21dc3f0ebe8d2fb2d6998b5559a04d2ac8924947f2fbaf70"
+      },
+      "root": "0xb4de27c0c80fc58d21dc3f0ebe8d2fb2d6998b5559a04d2ac8924947f2fbaf70",
+      "expected": true
+    }
+  ]
+}

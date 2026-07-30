@@ -1,0 +1,37 @@
+{
+  "name": "@smritheon/memora-protocol",
+  "version": "0.1.0",
+  "private": false,
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf dist",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "ethers": "^6.10.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.0",
+    "vitest": "^1.2.0"
+  },
+  "description": "Memora protocol primitives: canonical types, canonicalization, crypto, signing envelopes, Merkle batch proofs, and TEE attestation verification (public tier)",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/memora-hq/memora-protocol.git",
+    "directory": "packages/protocol"
+  },
+  "homepage": "https://github.com/memora-hq/memora-protocol#readme",
+  "keywords": [
+    "provenance",
+    "agents",
+    "audit-log",
+    "verifiable-compute"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}

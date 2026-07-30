@@ -1,0 +1,176 @@
+{
+  "vector_id": "merkle-v1",
+  "domain": "memora:leaf:v1\\n",
+  "generated_by": "packages/protocol/src/merkle.ts — computeEventLeafHash / buildMerkleTree / getMerkleProof / verifyMerkleProof",
+  "key_note": "Well-known Hardhat dev accounts #0 and #1. Public, test-only keys used throughout this repo's tests — never used for production value.",
+  "tree": {
+    "leaf_inputs": [
+      {
+        "event_id": "0000000000000000000000000000000000000000000000000000000000000001",
+        "payload_hash": "1111111111111111111111111111111111111111111111111111111111111111",
+        "agent_id": "conformance-agent",
+        "agent_signer": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "operator_signer": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+        "parent_event_ids": [],
+        "event_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "agent_commit_digest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      {
+        "event_id": "0000000000000000000000000000000000000000000000000000000000000002",
+        "payload_hash": "2222222222222222222222222222222222222222222222222222222222222222",
+        "agent_id": "conformance-agent",
+        "agent_signer": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "operator_signer": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+        "parent_event_ids": [
+          "000000000000000000000000000000000000000000000000000000000000000f",
+          "0000000000000000000000000000000000000000000000000000000000000001"
+        ],
+        "event_digest": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+        "agent_commit_digest": null
+      },
+      {
+        "event_id": "0000000000000000000000000000000000000000000000000000000000000003",
+        "payload_hash": "0x3333333333333333333333333333333333333333333333333333333333333333",
+        "agent_id": "conformance-agent",
+        "agent_signer": null,
+        "operator_signer": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+        "parent_event_ids": [
+          "0000000000000000000000000000000000000000000000000000000000000002"
+        ],
+        "event_digest": null,
+        "agent_commit_digest": null
+      },
+      {
+        "event_id": "0000000000000000000000000000000000000000000000000000000000000004",
+        "payload_hash": "4444444444444444444444444444444444444444444444444444444444444444",
+        "agent_id": "conformance-agent-two",
+        "operator_signer": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+        "parent_event_ids": [
+          "0000000000000000000000000000000000000000000000000000000000000003"
+        ]
+      },
+      {
+        "event_id": "0000000000000000000000000000000000000000000000000000000000000005",
+        "payload_hash": "5555555555555555555555555555555555555555555555555555555555555555",
+        "agent_id": "conformance-agent-two",
+        "agent_signer": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "operator_signer": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+        "parent_event_ids": [
+          "0000000000000000000000000000000000000000000000000000000000000004"
+        ],
+        "event_digest": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+        "agent_commit_digest": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+      }
+    ],
+    "leaves": [
+      "ce2626fa067a2d80be4ee4fc1a4697cf995214b1c2750bde3a2ddc2bc2f27e35",
+      "da9bc5c1c0c4a640a1d76e2cc4102509325318c5815e3e0006e71278ca46bf06",
+      "fc43ba84c828cf23786f957b73b17069058462a348168bd9f1558fcd526162ca",
+      "34f1acb2bb49ed81c5eade4c87b3ab0df8ae83e90aebab713e14b7fc2661dfa7",
+      "76b6314f380e47805ddb0c9cea169f9af686775ab7f0176a8a8173750b06a83e"
+    ],
+    "levels": [
+      [
+        "ce2626fa067a2d80be4ee4fc1a4697cf995214b1c2750bde3a2ddc2bc2f27e35",
+        "da9bc5c1c0c4a640a1d76e2cc4102509325318c5815e3e0006e71278ca46bf06",
+        "fc43ba84c828cf23786f957b73b17069058462a348168bd9f1558fcd526162ca",
+        "34f1acb2bb49ed81c5eade4c87b3ab0df8ae83e90aebab713e14b7fc2661dfa7",
+        "76b6314f380e47805ddb0c9cea169f9af686775ab7f0176a8a8173750b06a83e"
+      ],
+      [
+        "e2588b7dda532b8db5e973b5ac6eea4e7737ec3ad6b12341327514e463547343",
+        "75fec3141f3b3da989104272e42349a4a3aa29dfe318c2d6eb9c26d80378eb3d",
+        "72f2dbb713b629f2159f9294c0e0f2e7719b6a948125622829e911cc1ae3500b"
+      ],
+      [
+        "8f9f11a4615634f5dda50ec50ccef9d79a8d49c86ad5413a1f8974fcfe04d625",
+        "5f4bf7fa82b5053499ca0b1b2d1b9a497f54dbe5e126040e3f2a44a6a536cead"
+      ],
+      [
+        "a45bd19b36caab230dca47d25cab2c3c547a1847024ca90776bbe86fbe10e8ec"
+      ]
+    ],
+    "root": "a45bd19b36caab230dca47d25cab2c3c547a1847024ca90776bbe86fbe10e8ec"
+  },
+  "cases": [
+    {
+      "name": "valid-proof-index-2",
+      "note": "Interior leaf: proof contains both a right-side and a left-side step.",
+      "leaf": "fc43ba84c828cf23786f957b73b17069058462a348168bd9f1558fcd526162ca",
+      "proof": {
+        "index": 2,
+        "leaf": "fc43ba84c828cf23786f957b73b17069058462a348168bd9f1558fcd526162ca",
+        "proof": [
+          {
+            "hash": "34f1acb2bb49ed81c5eade4c87b3ab0df8ae83e90aebab713e14b7fc2661dfa7",
+            "side": "right"
+          },
+          {
+            "hash": "e2588b7dda532b8db5e973b5ac6eea4e7737ec3ad6b12341327514e463547343",
+            "side": "left"
+          },
+          {
+            "hash": "5f4bf7fa82b5053499ca0b1b2d1b9a497f54dbe5e126040e3f2a44a6a536cead",
+            "side": "right"
+          }
+        ],
+        "root": "a45bd19b36caab230dca47d25cab2c3c547a1847024ca90776bbe86fbe10e8ec"
+      },
+      "root": "a45bd19b36caab230dca47d25cab2c3c547a1847024ca90776bbe86fbe10e8ec",
+      "expected": true
+    },
+    {
+      "name": "valid-proof-index-4",
+      "note": "Last leaf of an odd-length level: exercises duplicate-last-node padding.",
+      "leaf": "76b6314f380e47805ddb0c9cea169f9af686775ab7f0176a8a8173750b06a83e",
+      "proof": {
+        "index": 4,
+        "leaf": "76b6314f380e47805ddb0c9cea169f9af686775ab7f0176a8a8173750b06a83e",
+        "proof": [
+          {
+            "hash": "76b6314f380e47805ddb0c9cea169f9af686775ab7f0176a8a8173750b06a83e",
+            "side": "right"
+          },
+          {
+            "hash": "72f2dbb713b629f2159f9294c0e0f2e7719b6a948125622829e911cc1ae3500b",
+            "side": "right"
+          },
+          {
+            "hash": "8f9f11a4615634f5dda50ec50ccef9d79a8d49c86ad5413a1f8974fcfe04d625",
+            "side": "left"
+          }
+        ],
+        "root": "a45bd19b36caab230dca47d25cab2c3c547a1847024ca90776bbe86fbe10e8ec"
+      },
+      "root": "a45bd19b36caab230dca47d25cab2c3c547a1847024ca90776bbe86fbe10e8ec",
+      "expected": true
+    },
+    {
+      "name": "tampered-proof-index-2",
+      "note": "NEGATIVE vector. Identical to valid-proof-index-2 except the first proof step's sibling hash has one character flipped. Every conforming verifier must return false. A verifier returning true here is broken.",
+      "leaf": "fc43ba84c828cf23786f957b73b17069058462a348168bd9f1558fcd526162ca",
+      "proof": {
+        "index": 2,
+        "leaf": "fc43ba84c828cf23786f957b73b17069058462a348168bd9f1558fcd526162ca",
+        "proof": [
+          {
+            "hash": "04f1acb2bb49ed81c5eade4c87b3ab0df8ae83e90aebab713e14b7fc2661dfa7",
+            "side": "right"
+          },
+          {
+            "hash": "e2588b7dda532b8db5e973b5ac6eea4e7737ec3ad6b12341327514e463547343",
+            "side": "left"
+          },
+          {
+            "hash": "5f4bf7fa82b5053499ca0b1b2d1b9a497f54dbe5e126040e3f2a44a6a536cead",
+            "side": "right"
+          }
+        ],
+        "root": "a45bd19b36caab230dca47d25cab2c3c547a1847024ca90776bbe86fbe10e8ec"
+      },
+      "root": "a45bd19b36caab230dca47d25cab2c3c547a1847024ca90776bbe86fbe10e8ec",
+      "expected": false,
+      "tampered_from": "valid-proof-index-2"
+    }
+  ]
+}

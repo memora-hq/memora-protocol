@@ -1,0 +1,60 @@
+{
+  "vector_id": "agent-v1",
+  "domain": "memora:agent:v1\\n",
+  "generated_by": "packages/protocol/src/envelope.ts — computeAgentSigningDigest / signAgentEvent",
+  "key_note": "Well-known Hardhat dev accounts #0 and #1. Public, test-only keys used throughout this repo's tests — never used for production value.",
+  "agent_private_key": "0x59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d",
+  "agent_address": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+  "cases": [
+    {
+      "name": "agent-no-parents",
+      "note": "Baseline agent countersignature over a parentless event.",
+      "fields_input": {
+        "agent_id": "conformance-agent",
+        "agent_signer": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "parent_event_ids": [],
+        "payload_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "task_id": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      "fields_sorted": {
+        "agent_id": "conformance-agent",
+        "agent_signer": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "parent_event_ids": [],
+        "payload_hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "task_id": "0x0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      "digest_hex": "1e10d993641c05f27bbf56f1a98ce552b4ba8c87a101df6e9ba1182ac260714a",
+      "signature": "0xdf6a03f68d2755ac23ad56daa5e75f3ac143d34e0c72b7fb2c4517244f8f72e5492420b1435bc9ed128d2d5030d5bfd1ecf1df9b81e00a7e7b0f54ffe99746de1c",
+      "recovered_signer": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8"
+    },
+    {
+      "name": "agent-unsorted-parents",
+      "note": "fields_input.parent_event_ids is deliberately unsorted. The frozen digest is the SORTED-parent digest — signAgentEvent/verifyAgentSignature sort internally.",
+      "fields_input": {
+        "agent_id": "conformance-agent",
+        "agent_signer": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "parent_event_ids": [
+          "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+          "2222222222222222222222222222222222222222222222222222222222222222",
+          "7777777777777777777777777777777777777777777777777777777777777777"
+        ],
+        "payload_hash": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+        "task_id": "task-conformance-001"
+      },
+      "fields_sorted": {
+        "agent_id": "conformance-agent",
+        "agent_signer": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "parent_event_ids": [
+          "2222222222222222222222222222222222222222222222222222222222222222",
+          "7777777777777777777777777777777777777777777777777777777777777777",
+          "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+        ],
+        "payload_hash": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+        "task_id": "task-conformance-001"
+      },
+      "digest_hex": "b8a416441de3719015aba909ddf492f20c29abe243edc8350587a24538d95144",
+      "signature": "0xd74d36ebed53a250e1b31f243a258f93e533ae967114e8ec7c56d8fb37936417127c24a246a5ce31c4c2eb162a5c475a66b35dc160dfab3efef95abe94f7d7551b",
+      "recovered_signer": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8"
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "format": "memora.local.bundle",
+  "version": 2,
+  "manifest": {
+    "format": "memora.local.execution",
+    "version": 1,
+    "session_id": "local_ms5tgifj_223ae239",
+    "agent_id": "local:conformance:70997970",
+    "capture_source": "process-wrapper",
+    "capture_root_hash": "608a7e0b0621b2dfde7180efed31460250f8d66dbc6179d1f92efc0d7eb2c496",
+    "started_at": "2026-07-29T08:22:05.647Z",
+    "completed_at": "2026-07-29T08:22:05.665Z",
+    "root_event_id": "38627d05c8b2993cd1167b55a006b3650923994a9eba97de7b7747b5196bc665",
+    "event_ids": [
+      "38627d05c8b2993cd1167b55a006b3650923994a9eba97de7b7747b5196bc665",
+      "336eba4691b1aa994370b3389ef94b34b122c8850e590b7662562f8b36d8f04f",
+      "56c40c567e9807ad4c94570aa69cd5a8181ff0a33d71d19d65a58d7646c65913",
+      "f617cca8129e1d0fd5e4bc7aa028d06eff567b4ea6a9990073c13c617285f013"
+    ],
+    "signer": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+    "capture_status": "complete",
+    "capture_warnings": [],
+    "signature": "0x5f006b3741368ccce42172457173d4b852c8cefae7e112dd6c433e2d8b5c109934d75aaa21d76942dfd30d96683a4038b61980bf3f97a276c3d14e5c912c73811b"
+  },
+  "events": [
+    {
+      "format": "memora.local.event",
+      "version": 1,
+      "observed_at": "2026-07-29T08:22:05.651Z",
+      "source": "wrapper_observed",
+      "commit": {
+        "memory_id": "mem_5d86a7154dd0fdb5745eee14a637d48b",
+        "agent_id": "local:conformance:70997970",
+        "cid_ciphertext": "local:sha256:5192f248c58a2b556622a00f2358e7fd47b25c21ea209b678dea9071aff02bf5",
+        "payload_hash": "2dd7e2af5902e570058d1e2a0af4f06826555bbbaf3ae8d6d94a5267e5dbbb60",
+        "schema_version": 1,
+        "event_type": "session_started",
+        "mission_id": "local_ms5tgifj_223ae239",
+        "parent_count": 0,
+        "parent_event_ids": [],
+        "signer": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "signature": "0xa8e188fd4d03b2e680b1cd5cb5c6c2854b583cd66658b156d12a11d6d2d4816a1c008e9d07348fedd4fdd03b1f79ae6deb8e9edc8c464ec56b75dcd5b9d621ce1b",
+        "event_id": "38627d05c8b2993cd1167b55a006b3650923994a9eba97de7b7747b5196bc665"
+      }
+    },
+    {
+      "format": "memora.local.event",
+      "version": 1,
+      "observed_at": "2026-07-29T08:22:05.660Z",
+      "source": "adapter_reported",
+      "commit": {
+        "memory_id": "mem_72f8ca069016bf11530f501d9792eb1b",
+        "agent_id": "local:conformance:70997970",
+        "cid_ciphertext": "local:sha256:2a81c224fd42ae6009bf3e9b288e20ea386311e8939b5fd8a12b48a5d49a4eef",
+        "payload_hash": "3785fa5e2ad890888634cb093d6a604e13e13debc86920b7cf6c223e177055f6",
+        "schema_version": 1,
+        "event_type": "prompt_submitted",
+        "mission_id": "local_ms5tgifj_223ae239",
+        "parent_count": 1,
+        "parent_event_ids": [
+          "38627d05c8b2993cd1167b55a006b3650923994a9eba97de7b7747b5196bc665"
+        ],
+        "signer": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "signature": "0x137afe56a9e8b989d0f3d178d1344bafbf9d47c86b85691e61a108f0629e1e2e48ba733ee9c158e9de94ef082122dd95e3c2b7a6a881505a5712fe0cb0bdbf1b1c",
+        "event_id": "336eba4691b1aa994370b3389ef94b34b122c8850e590b7662562f8b36d8f04f"
+      }
+    },
+    {
+      "format": "memora.local.event",
+      "version": 1,
+      "observed_at": "2026-07-29T08:22:05.663Z",
+      "source": "adapter_reported",
+      "commit": {
+        "memory_id": "mem_3bfc7cd5440096e88aea021a092d6eca",
+        "agent_id": "local:conformance:70997970",
+        "cid_ciphertext": "local:sha256:cdaa96e1edc3bf51d267e6d4e1ffc225290729419b08a040daa6f5eee5e8a208",
+        "payload_hash": "7b505a892d90e25c980ffaecf2bc75c77b7b630630bd250906c9e0a4c66e0f8e",
+        "schema_version": 1,
+        "event_type": "tool_completed",
+        "mission_id": "local_ms5tgifj_223ae239",
+        "parent_count": 1,
+        "parent_event_ids": [
+          "336eba4691b1aa994370b3389ef94b34b122c8850e590b7662562f8b36d8f04f"
+        ],
+        "signer": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "signature": "0xd878380d0121d07593d6348cf2e38e42cef120f13d11f52b2a792e8545559c8462afe9f452209cc0ffaa73d01b96c457f58f358643456f50afe5c30afab639fb1c",
+        "event_id": "56c40c567e9807ad4c94570aa69cd5a8181ff0a33d71d19d65a58d7646c65913"
+      }
+    },
+    {
+      "format": "memora.local.event",
+      "version": 1,
+      "observed_at": "2026-07-29T08:22:05.665Z",
+      "source": "wrapper_observed",
+      "commit": {
+        "memory_id": "mem_cf7fdab691cdec5a4d368b675d4e801f",
+        "agent_id": "local:conformance:70997970",
+        "cid_ciphertext": "local:sha256:ad77c099ca354d0bf64079a435ae8974948f836ae50d354c012e3a6180a76392",
+        "payload_hash": "4f62e57d5208ea5962413e8e0bc240ca588bff7396e90ca59fd69b8b430d321f",
+        "schema_version": 1,
+        "event_type": "session_completed",
+        "mission_id": "local_ms5tgifj_223ae239",
+        "parent_count": 1,
+        "parent_event_ids": [
+          "56c40c567e9807ad4c94570aa69cd5a8181ff0a33d71d19d65a58d7646c65913"
+        ],
+        "signer": "0x70997970C51812dc3A010C7d01b50e0d17dc79C8",
+        "signature": "0x2067b90e8f96049b1665e13b409ca3954e06bbaa4b41acf0d95c71a8f0d35d1131b68491ed31503cd2b575ed8cd85cadf507c564a2bbc0aa8c7d0a12fe1da4e11b",
+        "event_id": "f617cca8129e1d0fd5e4bc7aa028d06eff567b4ea6a9990073c13c617285f013"
+      }
+    }
+  ],
+  "payloads": {
+    "5192f248c58a2b556622a00f2358e7fd47b25c21ea209b678dea9071aff02bf5": {
+      "version": 1,
+      "alg": "AES-256-GCM",
+      "nonce": "mzzJl+dnTcZLWCOo",
+      "ciphertext": "6EsqWC1H+OCcLKVYM6jP9ViTvp/ROsZLrAxpVYhjoKQRWyOM667f1Vfdh8UFYC3N4CJnI8NX8eU56JQOxZEgB/3dLaD8xlviepHx6TYY5Q+5BSCQDkJb/Fhpz3UcZrS+eDGrN5vVTcQxJQBppmYWYhhQys7xSnj9N+JgwZ/YHpaudXGdnyRSLIPO15GMQR5K3E14wSmF0NKQG9352T0rkqw/+pknANFaqW3ti1rweRANpwDMmOtsNQAa64patHXEHg18SyUjF5onzLlOtgoeL2ccdgs6jZyPEEy1GHUuw984yKjfJ6iSxuQQXtaZI66ttsoF4zinT0RQ3yo1smSwjks06jxVfHZKCYewSZIeaHzF6aLPVcw7a5GSa+M+Wp1Zio3wr/ygSuNwb4zy34o=",
+      "tag": "/aZv9zr73hXLvbkNRYqBzA=="
+    },
+    "2a81c224fd42ae6009bf3e9b288e20ea386311e8939b5fd8a12b48a5d49a4eef": {
+      "version": 1,
+      "alg": "AES-256-GCM",
+      "nonce": "y5ZX0lP8DiwqG/Vy",
+      "ciphertext": "p44K8BRY21j4kSly1kdQFhNbBNAUlIWpvqPAeswRROnrbVeWWt7bG/yk6tcjAkcakqjSD14QEnQa5j6s9PgnZqWqG1TnM92rfex0dXQspOzL7IaRR96eQY3x8N5lIvEpcu0sJiRHFJGhLQYbwBgWvkpzEHanwkgNOlZFAr5hbvJxalJespj+uBO5ANZSrGwxgxRc8kPoc03u6M5WQxF8Ax6z3CkVTgFRWbmLiJAQLJ011qpPqmqX7emJ46EtQJGuzBSlaTVaDOF137/zi71F6BypcVGHx0M3NYY+UtzCJlvmdLOy0VpwRQ+QkMqDKftBcbJsRGINVdLRbI1G5pSfI52OmHe1j0ch3TdmfUBFafRNUClb6QdY0VfBooEAWXnAJSosnWHbOM9mOmZpyuH0VSWaSMjehHoCFVonCYFPXLSdQdZgnGZ/yFQI7FBFbAHQf8zzYdoAK4F/fdQecJ0zREucMyx5IThJG3HC+hl9",
+      "tag": "nXchtspnAAgsHnSssL0IZw=="
+    },
+    "cdaa96e1edc3bf51d267e6d4e1ffc225290729419b08a040daa6f5eee5e8a208": {
+      "version": 1,
+      "alg": "AES-256-GCM",
+      "nonce": "+QLakZyFUhj+EYzl",
+      "ciphertext": "Z4sxX5nXGiQ4yMa58dDYp/3lA47hdMGPLze8KoFHeIDCgxeNByMG/nKmxoMZFyAtxlfpvD1YdtDwxHSvjxF1BhI1XpIH7M8icuUkyrCSajnoOahjek+GhbwtHWVXPi7WxSglm2DBAYlVRpm6PN1pIHDiWh7CG4uybEl8v1yN9DoUJVeFYqFw8XLnmEIT5/+PId2sFVIJOtUVVhplBK+Ylp5YVE6VHPmz/iiLZrOqrMMsOfEmIS+hH4ur/75cSq7OkcLMyEDPpEzoMJ2EZmcKiYuJ4yj4U3E/u0GCDCSfIFTm6S5VaCIb6W8WYxVBKORMwgXjgZDEj/k/Cu1LkVIscIDvOv5bgchtiIbnhFSIthmeWR8yiz7k00bsQujgiEctUHWt6TLZUzgNRFOib23Ccai9QntzpQh2wzKmhaGEqWZ9Bl3coWv80ef9X1j+sayzm0ZiqPju535XiI7bipgOgOz/YUN/GFNdNrqPS6/2k/d6YqXOwhJN1Zd7epio/eO5GvhLyN7WtJp08vwEFOsmXZkf9A==",
+      "tag": "zILmf2Bsxk1/L/JV1A3nRw=="
+    },
+    "ad77c099ca354d0bf64079a435ae8974948f836ae50d354c012e3a6180a76392": {
+      "version": 1,
+      "alg": "AES-256-GCM",
+      "nonce": "b6ZsmXgajf1V8okk",
+      "ciphertext": "+58pgRjAs1J83dtnghcEzWvgRBfXfxakqwMqc3KVHcp6so0X3jUuTaveLLrOf1CZIehLNvDNWR9foacXEYuZnupgQ+OqVWalmRC6Wx736fxwaDEDIDalMCboxMUrYbPm4dju6HEmJLiK6SOOgWxEParqrJWLNCl8VkR4AzTD1BLLbyE9gq/7NXGVRBcwRn4IULRDdSObhhgnps3d/ZsU9U1aM4rD3Hwir/l4k9qgMtUwqk3acN5P2J/Jvv0roEAHqWU1q3AC2D+M5yEd1yMGo+7WkmsZst+ZjOIEgjIoZSA/tsDK3l2T6O6uO+0DhKvTWILEsUURjOdb/l50+pDFw8IEkcOUthK4M9ECC2E0Z45FLLcBg65J/+mgQqY8caRTf9Ent7vK/2Hd4O4PBAy8V/MsyY23+rEIrKJbsL16pfwTN3TGSQrMa3dCq8+XWw0zjWg/j05w+tzewIul",
+      "tag": "g2wexD/2Q4IIG1GqQG+ppw=="
+    }
+  }
+}

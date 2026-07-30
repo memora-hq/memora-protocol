@@ -1,0 +1,52 @@
+name: Publish
+
+# Publishes via npm Trusted Publishing (OIDC) — no NPM_TOKEN secret anywhere.
+#
+# One-time prerequisite, done on npmjs.com by a maintainer with publish rights on the
+# @smritheon scope: on the package's (or scope's) settings page, add a Trusted Publisher
+# pointing at this exact repo and this exact workflow filename
+# (memora-hq/memora-protocol, .github/workflows/publish.yml). Until that's configured, this
+# workflow's `npm publish` step will fail with an auth error — that's expected, not a bug
+# in the workflow.
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      id-token: write # required for OIDC trusted publishing
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          registry-url: "https://registry.npmjs.org"
+          cache: pnpm
+
+      - name: Ensure npm supports OIDC trusted publishing (>= 11.5.1)
+        run: npm install -g npm@latest
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build
+        run: pnpm build
+
+      - name: Unit tests + conformance vectors
+        run: pnpm test
+
+      - name: Publish
+        run: npm publish --access public --provenance
