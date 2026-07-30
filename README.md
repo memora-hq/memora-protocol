@@ -9,7 +9,10 @@ it's real?** It contains no network calls, no storage, no service logic — just
 math. Everything needed to *produce or verify* a record lives here; everything needed to
 *operate* the hosted service does not.
 
-## Install
+Most people never install this directly — it arrives automatically as a dependency of
+[`@smritheon/memora-core`](https://github.com/memora-hq/memora-sdk) (the SDK) or
+[`memora-local`](https://github.com/memora-hq/memora-local) (the desktop app). Install it
+yourself only if you're writing your own verifier or tooling directly against the schema:
 
 ```bash
 npm install @smritheon/memora-protocol
