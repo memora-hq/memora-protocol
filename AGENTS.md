@@ -8,7 +8,7 @@ does, from the published npm version.
 
 ## What this is
 
-`@smritheon/memora-protocol` — canonical types, deterministic JSON canonicalization, signing
+`@memora-hq/memora-protocol` — canonical types, deterministic JSON canonicalization, signing
 digest computation, Merkle batch proofs, and TEE attestation quote handling. Pure functions and
 type declarations. No `fetch`, no filesystem writes beyond build output, no environment
 variables read at runtime.

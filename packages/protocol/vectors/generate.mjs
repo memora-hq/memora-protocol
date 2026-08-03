@@ -17,7 +17,7 @@
  * packages/protocol and packages/local — never by hand-computing hashes. Build
  * both packages before running:
  *
- *   pnpm --filter @smritheon/memora-protocol build
+ *   pnpm --filter @memora-hq/memora-protocol build
  *   pnpm --filter @memora/local build
  *   node packages/protocol/vectors/generate.mjs
  *

@@ -1,4 +1,4 @@
-# @smritheon/memora-protocol
+# @memora-hq/memora-protocol
 
 The signing and verification primitives behind [Memora](https://github.com/memora-hq) — canonical
 record types, deterministic JSON canonicalization, the signing digests that get `ecrecover`'d
@@ -10,12 +10,12 @@ math. Everything needed to *produce or verify* a record lives here; everything n
 *operate* the hosted service does not.
 
 Most people never install this directly — it arrives automatically as a dependency of
-[`@smritheon/memora-core`](https://github.com/memora-hq/memora-sdk) (the SDK) or
+[`@memora-hq/memora-core`](https://github.com/memora-hq/memora-sdk) (the SDK) or
 [`memora-local`](https://github.com/memora-hq/memora-local) (the desktop app). Install it
 yourself only if you're writing your own verifier or tooling directly against the schema:
 
 ```bash
-npm install @smritheon/memora-protocol
+npm install @memora-hq/memora-protocol
 ```
 
 ## What's in here

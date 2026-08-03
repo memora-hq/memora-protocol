@@ -3,7 +3,7 @@ name: Publish
 # Publishes via npm Trusted Publishing (OIDC) — no NPM_TOKEN secret anywhere.
 #
 # One-time prerequisite, done on npmjs.com by a maintainer with publish rights on the
-# @smritheon scope: on the package's (or scope's) settings page, add a Trusted Publisher
+# @memora-hq scope: on the package's (or scope's) settings page, add a Trusted Publisher
 # pointing at this exact repo and this exact workflow filename
 # (memora-hq/memora-protocol, .github/workflows/publish.yml). Until that's configured, this
 # workflow's `npm publish` step will fail with an auth error — that's expected, not a bug

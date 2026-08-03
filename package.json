@@ -3,8 +3,8 @@
   "private": true,
   "license": "Apache-2.0",
   "scripts": {
-    "build": "pnpm --filter @smritheon/memora-protocol run build",
-    "test": "pnpm --filter @smritheon/memora-protocol run test"
+    "build": "pnpm --filter @memora-hq/memora-protocol run build",
+    "test": "pnpm --filter @memora-hq/memora-protocol run test"
   },
   "packageManager": "pnpm@9.0.0"
 }

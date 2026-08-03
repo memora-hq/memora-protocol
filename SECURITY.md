@@ -2,7 +2,7 @@
 
 ## Scope
 
-This policy covers `@smritheon/memora-protocol` — the schema, canonicalization, signing digest,
+This policy covers `@memora-hq/memora-protocol` — the schema, canonicalization, signing digest,
 Merkle proof, and TEE attestation-verification code in this repository. It does not cover
 Memora's hosted service (key custody, write authorization, service infrastructure) — that has
 its own private security process.

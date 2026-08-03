@@ -1,6 +1,6 @@
 # Contributing
 
-`@smritheon/memora-protocol` is an open-source developer preview under Apache 2.0.
+`@memora-hq/memora-protocol` is an open-source developer preview under Apache 2.0.
 Contributions are welcome — bug fixes, documentation improvements, additional conformance
 vectors, and protocol discussion all help.
 

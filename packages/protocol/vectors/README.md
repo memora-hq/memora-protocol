@@ -1,7 +1,7 @@
 # Golden conformance vectors
 
 Frozen, machine-checkable ground truth for every cryptographic primitive
-`@smritheon/memora-protocol` exposes to the outside world.
+`@memora-hq/memora-protocol` exposes to the outside world.
 
 ## Why these exist
 
@@ -64,7 +64,7 @@ inputs — the actual multi-verifier-agreement pin).
 ## Regenerating (only ever to ADD)
 
 ```bash
-pnpm --filter @smritheon/memora-protocol build
+pnpm --filter @memora-hq/memora-protocol build
 node packages/protocol/vectors/generate.mjs
 ```
 
