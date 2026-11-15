@@ -1,0 +1,76 @@
+[
+  {
+    "name": "absent-task",
+    "profile": "hosted-indexer-json-stringify-v1",
+    "preimage": "{\"memory_id\":\"0x4444444444444444444444444444444444444444444444444444444444444444\",\"agent_id\":\"raw-agent\",\"cid_ciphertext\":\"ipfs://QmFrozen\",\"payload_hash\":\"0b3d5f19525b4039d2d1387acd7243b7f4c7d677665243cb9e14195398187af7\",\"schema_version\":1,\"signature\":null,\"signer\":\"0x7e9fb40f66c4e132Fa5E64E49f307E02B76540f8\",\"parent_count\":3}",
+    "event_id": "ea34f33f22b5a1adbdee4ea6ba65985b2c6ac85a78aae039ad2a52faf3372c48",
+    "signature": "0xdcc19ce2ff116033113340389d8a4ae4d66f3682372a7c996dbb18098d5fac0b70796d16959361fff9aa8581d170bc02d0208b7d4a167859ab897c97daab00ce1b",
+    "signing_digest": "50e7df906137e3b43c7549763cbaaa696ccd3ab91a5d4cf97537d513037df55a",
+    "commit": {
+      "memory_id": "0x4444444444444444444444444444444444444444444444444444444444444444",
+      "agent_id": "raw-agent",
+      "cid_ciphertext": "ipfs://QmFrozen",
+      "payload_hash": "0b3d5f19525b4039d2d1387acd7243b7f4c7d677665243cb9e14195398187af7",
+      "schema_version": 1,
+      "signature": "0xdcc19ce2ff116033113340389d8a4ae4d66f3682372a7c996dbb18098d5fac0b70796d16959361fff9aa8581d170bc02d0208b7d4a167859ab897c97daab00ce1b",
+      "signer": "0x7e9fb40f66c4e132Fa5E64E49f307E02B76540f8",
+      "parent_count": 3,
+      "event_id": "ea34f33f22b5a1adbdee4ea6ba65985b2c6ac85a78aae039ad2a52faf3372c48",
+      "parent_event_ids": [
+        "a",
+        "a",
+        "b"
+      ]
+    }
+  },
+  {
+    "name": "empty-task",
+    "profile": "hosted-indexer-json-stringify-v1",
+    "preimage": "{\"memory_id\":\"0x4444444444444444444444444444444444444444444444444444444444444444\",\"agent_id\":\"raw-agent\",\"task_id\":\"\",\"cid_ciphertext\":\"ipfs://QmFrozen\",\"payload_hash\":\"0b3d5f19525b4039d2d1387acd7243b7f4c7d677665243cb9e14195398187af7\",\"schema_version\":1,\"signature\":null,\"signer\":\"0x7e9fb40f66c4e132Fa5E64E49f307E02B76540f8\",\"parent_count\":3}",
+    "event_id": "dc3e574962aa96a089773caa574da02b0023babb381d10fe65cdf73acf7f600a",
+    "signature": "0x7387eb903b0b12157dd4523872e1d158826637cd6f022a4561be5313022f60e05d8f8d8a3283f4e09678ae81128f33a47b4838a49ffe5c89dbebd1e1b798283d1c",
+    "signing_digest": "4498c7f0ce715e725212b42bff81df4a2b7a171015431ccc45b075eec1eb51fe",
+    "commit": {
+      "memory_id": "0x4444444444444444444444444444444444444444444444444444444444444444",
+      "agent_id": "raw-agent",
+      "task_id": "",
+      "cid_ciphertext": "ipfs://QmFrozen",
+      "payload_hash": "0b3d5f19525b4039d2d1387acd7243b7f4c7d677665243cb9e14195398187af7",
+      "schema_version": 1,
+      "signature": "0x7387eb903b0b12157dd4523872e1d158826637cd6f022a4561be5313022f60e05d8f8d8a3283f4e09678ae81128f33a47b4838a49ffe5c89dbebd1e1b798283d1c",
+      "signer": "0x7e9fb40f66c4e132Fa5E64E49f307E02B76540f8",
+      "parent_count": 3,
+      "event_id": "dc3e574962aa96a089773caa574da02b0023babb381d10fe65cdf73acf7f600a",
+      "parent_event_ids": [
+        "a",
+        "a",
+        "b"
+      ]
+    }
+  },
+  {
+    "name": "task-bearing",
+    "profile": "hosted-indexer-json-stringify-v1",
+    "preimage": "{\"memory_id\":\"0x4444444444444444444444444444444444444444444444444444444444444444\",\"agent_id\":\"raw-agent\",\"task_id\":\"task-1\",\"cid_ciphertext\":\"ipfs://QmFrozen\",\"payload_hash\":\"0b3d5f19525b4039d2d1387acd7243b7f4c7d677665243cb9e14195398187af7\",\"schema_version\":1,\"signature\":null,\"signer\":\"0x7e9fb40f66c4e132Fa5E64E49f307E02B76540f8\",\"parent_count\":3}",
+    "event_id": "8ed9f1dceaf5025292c4e36de9d2a85efd668f25bce4f897ddc1aee0585486d5",
+    "signature": "0xa4ecef541e08efc4aa6c2eb61b70f3ebc8db6ea94fab11b345b6021a03d82cb9076d9c57cbc24c61b09b2e62a12bec54296094b6f5e7378c908cc026a592c1961c",
+    "signing_digest": "371733062e8f2595f48ec79cc38e312933237d7ec799373ff0d4ebdc067977d3",
+    "commit": {
+      "memory_id": "0x4444444444444444444444444444444444444444444444444444444444444444",
+      "agent_id": "raw-agent",
+      "task_id": "task-1",
+      "cid_ciphertext": "ipfs://QmFrozen",
+      "payload_hash": "0b3d5f19525b4039d2d1387acd7243b7f4c7d677665243cb9e14195398187af7",
+      "schema_version": 1,
+      "signature": "0xa4ecef541e08efc4aa6c2eb61b70f3ebc8db6ea94fab11b345b6021a03d82cb9076d9c57cbc24c61b09b2e62a12bec54296094b6f5e7378c908cc026a592c1961c",
+      "signer": "0x7e9fb40f66c4e132Fa5E64E49f307E02B76540f8",
+      "parent_count": 3,
+      "event_id": "8ed9f1dceaf5025292c4e36de9d2a85efd668f25bce4f897ddc1aee0585486d5",
+      "parent_event_ids": [
+        "a",
+        "a",
+        "b"
+      ]
+    }
+  }
+]

@@ -27,7 +27,7 @@ npm install @memora-hq/memora-protocol
 | `crypto.ts` | Hashing and signing primitives |
 | `envelope.ts` | Computes the operator and agent signing digests — the exact bytes signed and `ecrecover`'d |
 | `merkle.ts` | Builds and verifies Merkle proofs for batched records |
-| `tee.ts` | TEE attestation quote handling (verification of quote *content* — anchoring the quote *hash* on-chain is a separate, consuming concern) |
+| `tee.ts` | Legacy TEE quote inspection; authentic hardware verification is unsupported |
 | `phaseTimer.ts` | Small timing utility used by verifiers |
 
 ## Who uses this
@@ -62,3 +62,14 @@ Every tagged release is gated on the conformance vectors passing.
 ## License
 
 Apache-2.0
+
+
+### Hardware attestation limitation
+
+SNP and TDX quote inspection returns `valid: false` even when a digest matches and
+legacy fields are present. Measurements are untrusted metadata; structural checks
+prove neither hardware authenticity, signer binding nor freshness. The legacy
+`MEMORA_TDX_VERIFY_URL` response contract is unsupported and no endpoint is called.
+Mock verification remains a protocol-test facility only. Historical signed bytes,
+TEE signing domains and conformance vectors are unchanged. Consumers must not treat
+old structural acceptance or an anchored quote hash as authenticated hardware.

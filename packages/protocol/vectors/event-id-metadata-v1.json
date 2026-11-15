@@ -1,0 +1,126 @@
+[
+  {
+    "name": "agent-mission-hosted-indexer-json-stringify-v1",
+    "profile": "hosted-indexer-json-stringify-v1",
+    "preimage": "{\"memory_id\":\"0x4444444444444444444444444444444444444444444444444444444444444444\",\"agent_id\":\"raw-agent\",\"task_id\":\"task-1\",\"cid_ciphertext\":\"ipfs://QmFrozen\",\"payload_hash\":\"0b3d5f19525b4039d2d1387acd7243b7f4c7d677665243cb9e14195398187af7\",\"schema_version\":1,\"signature\":null,\"signer\":\"0x7e9fb40f66c4e132Fa5E64E49f307E02B76540f8\",\"agent_signer\":\"0x7e9fb40f66c4e132Fa5E64E49f307E02B76540f8\",\"agent_signature\":\"0xe7d7856b3b5e545795413ed041b7bdc8ee891f27afffd7e91481969028d77bf7055dc26a0dd094e219ef9aa47ed1cfcef2ba05b7e217b051a7ad9ff99e7b5f531b\",\"event_type\":\"tool_called\",\"mission_id\":\"mission-α\",\"parent_count\":3,\"derived_from_count\":2}",
+    "event_id": "bf00fc33b6f93f95f9b54c4ba1d7c60ac52faa91dcd552aa34d6ec2a2d95a75a",
+    "signature": "0x04880ba087122bcca23783a616b6d61f2228a3453bb28bef0dfe58ac00afb5535df884c0ad67540bb02d20d4d01d122b1cc7d9265fa183bef0d0d442ec817aa01b",
+    "signing_digest": "88e2bac9a895b9b9d2edc772bd838475884a657e381a5cf2c9cc98916490acf1",
+    "commit": {
+      "memory_id": "0x4444444444444444444444444444444444444444444444444444444444444444",
+      "agent_id": "raw-agent",
+      "task_id": "task-1",
+      "cid_ciphertext": "ipfs://QmFrozen",
+      "payload_hash": "0b3d5f19525b4039d2d1387acd7243b7f4c7d677665243cb9e14195398187af7",
+      "schema_version": 1,
+      "signature": "0x04880ba087122bcca23783a616b6d61f2228a3453bb28bef0dfe58ac00afb5535df884c0ad67540bb02d20d4d01d122b1cc7d9265fa183bef0d0d442ec817aa01b",
+      "signer": "0x7e9fb40f66c4e132Fa5E64E49f307E02B76540f8",
+      "agent_signer": "0x7e9fb40f66c4e132Fa5E64E49f307E02B76540f8",
+      "agent_signature": "0xe7d7856b3b5e545795413ed041b7bdc8ee891f27afffd7e91481969028d77bf7055dc26a0dd094e219ef9aa47ed1cfcef2ba05b7e217b051a7ad9ff99e7b5f531b",
+      "event_type": "tool_called",
+      "mission_id": "mission-α",
+      "parent_count": 3,
+      "derived_from_count": 2,
+      "event_id": "bf00fc33b6f93f95f9b54c4ba1d7c60ac52faa91dcd552aa34d6ec2a2d95a75a",
+      "parent_event_ids": [
+        "a",
+        "a",
+        "b"
+      ]
+    }
+  },
+  {
+    "name": "agent-mission-shared-protocol-json-stringify-v1",
+    "profile": "shared-protocol-json-stringify-v1",
+    "preimage": "{\"memory_id\":\"0x4444444444444444444444444444444444444444444444444444444444444444\",\"agent_id\":\"raw-agent\",\"cid_ciphertext\":\"ipfs://QmFrozen\",\"payload_hash\":\"0b3d5f19525b4039d2d1387acd7243b7f4c7d677665243cb9e14195398187af7\",\"schema_version\":1,\"signature\":null,\"task_id\":\"task-1\",\"signer\":\"0x7e9fb40f66c4e132Fa5E64E49f307E02B76540f8\",\"agent_signer\":\"0x7e9fb40f66c4e132Fa5E64E49f307E02B76540f8\",\"agent_signature\":\"0xe7d7856b3b5e545795413ed041b7bdc8ee891f27afffd7e91481969028d77bf7055dc26a0dd094e219ef9aa47ed1cfcef2ba05b7e217b051a7ad9ff99e7b5f531b\",\"event_type\":\"tool_called\",\"mission_id\":\"mission-α\",\"parent_count\":3,\"derived_from_count\":2}",
+    "event_id": "60c4283575e57330e693d401a0b30437ae6a4e863658e17a72a84f1ba6f1359c",
+    "signature": "0x7e18833cbec84714981f2642b38be0f1f2db99ec47135476bbcb77e87b733d04153e45a2a84113ae6f7741bb99822d8ec0e1b2333de4146ef024dacbe7dd9e941b",
+    "signing_digest": "b1600e63462db39619642f82f85eaa04c4878dc95ff007e8b8637e72950ac940",
+    "commit": {
+      "memory_id": "0x4444444444444444444444444444444444444444444444444444444444444444",
+      "agent_id": "raw-agent",
+      "cid_ciphertext": "ipfs://QmFrozen",
+      "payload_hash": "0b3d5f19525b4039d2d1387acd7243b7f4c7d677665243cb9e14195398187af7",
+      "schema_version": 1,
+      "signature": "0x7e18833cbec84714981f2642b38be0f1f2db99ec47135476bbcb77e87b733d04153e45a2a84113ae6f7741bb99822d8ec0e1b2333de4146ef024dacbe7dd9e941b",
+      "task_id": "task-1",
+      "signer": "0x7e9fb40f66c4e132Fa5E64E49f307E02B76540f8",
+      "agent_signer": "0x7e9fb40f66c4e132Fa5E64E49f307E02B76540f8",
+      "agent_signature": "0xe7d7856b3b5e545795413ed041b7bdc8ee891f27afffd7e91481969028d77bf7055dc26a0dd094e219ef9aa47ed1cfcef2ba05b7e217b051a7ad9ff99e7b5f531b",
+      "event_type": "tool_called",
+      "mission_id": "mission-α",
+      "parent_count": 3,
+      "derived_from_count": 2,
+      "event_id": "60c4283575e57330e693d401a0b30437ae6a4e863658e17a72a84f1ba6f1359c",
+      "parent_event_ids": [
+        "a",
+        "a",
+        "b"
+      ]
+    }
+  },
+  {
+    "name": "legacy-tee-hosted-indexer-json-stringify-v1",
+    "profile": "hosted-indexer-json-stringify-v1",
+    "preimage": "{\"memory_id\":\"0x4444444444444444444444444444444444444444444444444444444444444444\",\"agent_id\":\"raw-agent\",\"task_id\":\"task-1\",\"cid_ciphertext\":\"ipfs://QmFrozen\",\"payload_hash\":\"0b3d5f19525b4039d2d1387acd7243b7f4c7d677665243cb9e14195398187af7\",\"schema_version\":1,\"signature\":null,\"signer\":\"0x7e9fb40f66c4e132Fa5E64E49f307E02B76540f8\",\"agent_signer\":\"0x7e9fb40f66c4e132Fa5E64E49f307E02B76540f8\",\"agent_signature\":\"0xae5370375573e774515e6e6c1955ed9cf34b6917144587b6c610a0271840f58918d2faab47e1b3bbc5917dcfa98e93a58fa7064f901678c46f1eba4ca7593cd01b\",\"tee_quote_hash\":\"abababababababababababababababababababababababababababababababab\",\"tee_quote_cid\":\"ipfs://synthetic-legacy-quote\",\"event_type\":\"tool_called\",\"mission_id\":\"mission-α\",\"parent_count\":3,\"derived_from_count\":2}",
+    "event_id": "5dbaa9c071fd983cf5757a666cb8b8492ad0c354fcd9c57e31977c3bc9d1bc12",
+    "signature": "0x74929d81e8361ff0cb60fc8e8dd510f9a903bfbd73c29540671ef2ec5178648233504c274fb03287ebca8cb9d8e2712f41d0a254f40bfa795ce54e5c68e0fb8d1c",
+    "signing_digest": "d32952cb00bf5d6967847f521ceaf596e30d154c5ffedb565de494e4f57af1d3",
+    "commit": {
+      "memory_id": "0x4444444444444444444444444444444444444444444444444444444444444444",
+      "agent_id": "raw-agent",
+      "task_id": "task-1",
+      "cid_ciphertext": "ipfs://QmFrozen",
+      "payload_hash": "0b3d5f19525b4039d2d1387acd7243b7f4c7d677665243cb9e14195398187af7",
+      "schema_version": 1,
+      "signature": "0x74929d81e8361ff0cb60fc8e8dd510f9a903bfbd73c29540671ef2ec5178648233504c274fb03287ebca8cb9d8e2712f41d0a254f40bfa795ce54e5c68e0fb8d1c",
+      "signer": "0x7e9fb40f66c4e132Fa5E64E49f307E02B76540f8",
+      "agent_signer": "0x7e9fb40f66c4e132Fa5E64E49f307E02B76540f8",
+      "agent_signature": "0xae5370375573e774515e6e6c1955ed9cf34b6917144587b6c610a0271840f58918d2faab47e1b3bbc5917dcfa98e93a58fa7064f901678c46f1eba4ca7593cd01b",
+      "tee_quote_hash": "abababababababababababababababababababababababababababababababab",
+      "tee_quote_cid": "ipfs://synthetic-legacy-quote",
+      "event_type": "tool_called",
+      "mission_id": "mission-α",
+      "parent_count": 3,
+      "derived_from_count": 2,
+      "event_id": "5dbaa9c071fd983cf5757a666cb8b8492ad0c354fcd9c57e31977c3bc9d1bc12",
+      "parent_event_ids": [
+        "a",
+        "a",
+        "b"
+      ]
+    }
+  },
+  {
+    "name": "legacy-tee-shared-protocol-json-stringify-v1",
+    "profile": "shared-protocol-json-stringify-v1",
+    "preimage": "{\"memory_id\":\"0x4444444444444444444444444444444444444444444444444444444444444444\",\"agent_id\":\"raw-agent\",\"cid_ciphertext\":\"ipfs://QmFrozen\",\"payload_hash\":\"0b3d5f19525b4039d2d1387acd7243b7f4c7d677665243cb9e14195398187af7\",\"schema_version\":1,\"signature\":null,\"task_id\":\"task-1\",\"signer\":\"0x7e9fb40f66c4e132Fa5E64E49f307E02B76540f8\",\"agent_signer\":\"0x7e9fb40f66c4e132Fa5E64E49f307E02B76540f8\",\"agent_signature\":\"0xae5370375573e774515e6e6c1955ed9cf34b6917144587b6c610a0271840f58918d2faab47e1b3bbc5917dcfa98e93a58fa7064f901678c46f1eba4ca7593cd01b\",\"event_type\":\"tool_called\",\"mission_id\":\"mission-α\",\"parent_count\":3,\"derived_from_count\":2,\"tee_quote_hash\":\"abababababababababababababababababababababababababababababababab\",\"tee_quote_cid\":\"ipfs://synthetic-legacy-quote\"}",
+    "event_id": "1ec9f9eb327dc80de41b22e9736c9be02dcd59a108574d065479159c6f56d0aa",
+    "signature": "0xd0a593a6a08dcb3e68645ec10d6715428d9fbd3c7677676656b19ee8df3c6c635169239e08f04d3a6f9d7d9ed636b1c8e36a757925e9494bb13fd1b83c18347f1b",
+    "signing_digest": "02b397abfe7af692ddd63432e2bbfcf02ab237257e847fb01e1da59779cc97f2",
+    "commit": {
+      "memory_id": "0x4444444444444444444444444444444444444444444444444444444444444444",
+      "agent_id": "raw-agent",
+      "cid_ciphertext": "ipfs://QmFrozen",
+      "payload_hash": "0b3d5f19525b4039d2d1387acd7243b7f4c7d677665243cb9e14195398187af7",
+      "schema_version": 1,
+      "signature": "0xd0a593a6a08dcb3e68645ec10d6715428d9fbd3c7677676656b19ee8df3c6c635169239e08f04d3a6f9d7d9ed636b1c8e36a757925e9494bb13fd1b83c18347f1b",
+      "task_id": "task-1",
+      "signer": "0x7e9fb40f66c4e132Fa5E64E49f307E02B76540f8",
+      "agent_signer": "0x7e9fb40f66c4e132Fa5E64E49f307E02B76540f8",
+      "agent_signature": "0xae5370375573e774515e6e6c1955ed9cf34b6917144587b6c610a0271840f58918d2faab47e1b3bbc5917dcfa98e93a58fa7064f901678c46f1eba4ca7593cd01b",
+      "event_type": "tool_called",
+      "mission_id": "mission-α",
+      "parent_count": 3,
+      "derived_from_count": 2,
+      "tee_quote_hash": "abababababababababababababababababababababababababababababababab",
+      "tee_quote_cid": "ipfs://synthetic-legacy-quote",
+      "event_id": "1ec9f9eb327dc80de41b22e9736c9be02dcd59a108574d065479159c6f56d0aa",
+      "parent_event_ids": [
+        "a",
+        "a",
+        "b"
+      ]
+    }
+  }
+]

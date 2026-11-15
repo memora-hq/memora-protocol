@@ -5,3 +5,4 @@ export * from "./envelope.js";
 export * from "./merkle.js";
 export * from "./tee.js";
 export * from "./phaseTimer.js";
+export * from "./eventId.js";

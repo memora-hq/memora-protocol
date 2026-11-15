@@ -1,4 +1,4 @@
-import { describe, it, expect } from "vitest";
+import { afterEach, describe, it, expect, vi } from "vitest";
 import { createHash } from "crypto";
 import { createTeeVerifier, buildMockTeeQuote } from "./tee.js";
 
@@ -119,12 +119,14 @@ describe("SevSnpVerifier — structural validation", () => {
 
   const CLAIMED_SIGNER = "0x" + "1".repeat(40);
 
-  it("accepts a well-formed quote with valid binding bytes", async () => {
+  it("inspects legacy synthetic fields without authenticating hardware", async () => {
     const quote = makeSnpQuote();
     const hash  = createHash("sha256").update(quote).digest("hex");
     const verifier = createTeeVerifier({ MEMORA_TEE_PLATFORM: "amd-sev-snp" });
     const result = await verifier.verifyQuote(quote, hash, CLAIMED_SIGNER);
-    expect(result.valid).toBe(true);
+    expect(result.valid).toBe(false);
+    expect(result.reason).toMatch(/unsupported hardware verification/);
+    expect(result.agent_signer).toBe("");
     expect(result.platform).toBe("amd-sev-snp");
     expect(result.measurement.length).toBe(96); // 48 bytes = 96 hex chars
   });
@@ -154,5 +156,54 @@ describe("SevSnpVerifier — structural validation", () => {
     const result = await verifier.verifyQuote(quote, badHash, CLAIMED_SIGNER);
     expect(result.valid).toBe(false);
     expect(result.reason).toMatch(/hash mismatch/i);
+  });
+});
+
+
+describe("hardware authenticity cannot be synthesized", () => {
+  afterEach(() => { vi.unstubAllGlobals(); });
+  const signer = "0x" + "1".repeat(40);
+  const digest = (quote: Buffer) => createHash("sha256").update(quote).digest("hex");
+
+  it.each(["amd-sev-snp", "intel-tdx"])("rejects arbitrary nonzero %s quotes at every inspected length", async (platform) => {
+    const verifier = createTeeVerifier({ MEMORA_TEE_PLATFORM: platform });
+    for (const length of [0, 10, 239, 240, 263, 264, 296, 1024, 4096]) {
+      const quote = Buffer.alloc(length, 0xab);
+      const result = await verifier.verifyQuote(quote, digest(quote), signer);
+      expect(result.valid).toBe(false);
+      expect(result.reason).toMatch(/too short|unsupported hardware verification/);
+    }
+  });
+
+  it("preserves legacy TDX measurement inspection without binding the claimed signer", async () => {
+    const quote = Buffer.alloc(1024, 0);
+    quote.fill(0xcd, 48 + 0x28, 48 + 0x28 + 48);
+    quote.fill(0xab, 48 + 0x80, 48 + 0x80 + 32);
+    const verifier = createTeeVerifier({ MEMORA_TEE_PLATFORM: "intel-tdx" });
+    for (const claimed of [signer, "0x" + "2".repeat(40)]) {
+      const result = await verifier.verifyQuote(quote, digest(quote), claimed);
+      expect(result).toMatchObject({ valid: false, agent_signer: "", measurement: "cd".repeat(48) });
+    }
+    expect((await verifier.verifyQuote(quote, "0".repeat(64), signer)).reason).toMatch(/hash mismatch/);
+    quote.fill(0, 48 + 0x80, 48 + 0x80 + 32);
+    expect((await verifier.verifyQuote(quote, digest(quote), signer)).reason).toMatch(/all zeros/);
+  });
+
+  it.each([
+    { valid: true, platform: "intel-tdx", agent_signer: signer, measurement: "ab".repeat(48) },
+    { valid: "true" }, null,
+  ])("does not trust the legacy external verifier response %j", async (response) => {
+    const fetchMock = vi.fn().mockResolvedValue({ ok: true, json: async () => response });
+    vi.stubGlobal("fetch", fetchMock);
+    const quote = Buffer.alloc(1024, 0xab);
+    const verifier = createTeeVerifier({ MEMORA_TEE_PLATFORM: "intel-tdx", MEMORA_TDX_VERIFY_URL: "https://verifier.test" });
+    const result = await verifier.verifyQuote(quote, digest(quote), signer);
+    expect(result.valid).toBe(false);
+    expect(result.reason).toMatch(/unsupported.*external TDX verifier/);
+    expect(fetchMock).not.toHaveBeenCalled();
+  });
+
+  it("rejects unknown platform configurations instead of defaulting to SNP", () => {
+    expect(() => createTeeVerifier({ MEMORA_TEE_PLATFORM: "unknown" })).toThrow(/unsupported TEE platform/);
   });
 });
